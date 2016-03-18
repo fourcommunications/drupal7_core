@@ -1,36 +1,53 @@
-# Ignore configuration files that may contain sensitive information.
-sites/*/*settings*.php
-
-# Ignore paths that contain generated content.
-files/
-sites/*/files
-sites/*/private
-
-# Ignore default text files
+# Created by .ignore support plugin (hsz.mobi)
+# Don't ignore settings.php files - sites/*/settings.php - except in
+# sites/default/; ignore local_settings.php files instead :)
+sites/default/settings.php
 robots.txt
-/CHANGELOG.txt
-/COPYRIGHT.txt
-/INSTALL*.txt
-/LICENSE.txt
-/MAINTAINERS.txt
-/UPGRADE.txt
-/README.txt
-sites/all/README.txt
-sites/all/modules/README.txt
-sites/all/themes/README.txt
+/.idea
+*.mysql.gz
+*.mysql.gz.info
+/drupal*/cache/normal/*
+/www/test.php
+/www/grep
+/local_databases.php
+/local_settings.php
+*.mysql.gz.aes
+*.mysql.gz.aes.info
 
-# Ignore everything but the "sites" folder ( for non core developer )
-.htaccess
-web.config
-authorize.php
-cron.php
-index.php
-install.php
-update.php
-xmlrpc.php
-/includes
-/misc
-/modules
-/profiles
-/scripts
-/themes
+# Ignore PhpStorm config directories.
+.idea
+
+# Ignore SCSS cache files.
+*.scssc
+
+# Don't ignore the .htaccess in the files directories - this allows us to put
+# the files/ directory into git.
+!sites/*/files/.htaccess
+!drupal*/cache/index.html
+www/test.*
+sites/*/files
+www/cache/*
+
+# Ignore Mac files, especially "Icon\r" files which make the baby Jesus cry...
+# Ignore privatefiles.
+privatefiles/*
+.DS_Store
+
+# The following three lines contain special characters to tell Git to ignore the
+# Mac Icon files whose names contain a newline character (because Apple are
+# idiots, sometimes, and I can say that because I'm an Apple fan, so nyer nyer).
+Icon
+
+
+# Do not change anything above this line after "The following lines...".
+
+# Ignore the multisitemaker's configuration.php file and symlink.
+greyhead_multisitemaker/configuration.php
+www/multisitemaker
+
+# Ignore environment type files in multisite directories.
+sites/*/ENVIRONMENT_TYPE*
+sites/ENVIRONMENT_TYPE*
+
+# Ignore downloaded deployment scripts.
+deployment-scripts/*-greyhead.sh
