@@ -1,16 +1,25 @@
 # Created by .ignore support plugin (hsz.mobi)
 # Don't ignore settings.php files - sites/*/settings.php - except in
 # sites/default/; ignore local_settings.php files instead :)
-sites/default/settings.php
 robots.txt
-/.idea
+
 *.mysql.gz
 *.mysql.gz.info
-/drupal*/cache/normal/*
-/www/test.php
-/www/grep
-/local_databases.php
-/local_settings.php
+
+# Ignore anything beyond the www symlink.
+www/*
+
+# Ignore anything in the /build directory, except the info file.
+build/*
+!build/this-directory-contains-external-components-of-this-build.txt
+
+drupal/cache/
+!drupal/cache/index.html
+
+drupal/test.*
+
+local_databases.php
+local_settings.php
 *.mysql.gz.aes
 *.mysql.gz.aes.info
 
@@ -22,11 +31,8 @@ robots.txt
 
 # Don't ignore the .htaccess in the files directories - this allows us to put
 # the files/ directory into git.
-!sites/*/files/.htaccess
-!drupal*/cache/index.html
-www/test.*
-sites/*/files
-www/cache/*
+sites
+drupal/sites
 
 # Ignore Mac files, especially "Icon\r" files which make the baby Jesus cry...
 # Ignore privatefiles.
@@ -42,12 +48,5 @@ Icon
 # Do not change anything above this line after "The following lines...".
 
 # Ignore the multisitemaker's configuration.php file and symlink.
-greyhead_multisitemaker/configuration.php
-www/multisitemaker
-
-# Ignore environment type files in multisite directories.
-sites/*/ENVIRONMENT_TYPE*
-sites/ENVIRONMENT_TYPE*
-
-# Ignore downloaded deployment scripts.
-deployment-scripts/*-greyhead.sh
+greyhead_multisitemaker
+drupal/multisitemaker
