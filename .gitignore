@@ -1,27 +1,19 @@
 # Created by .ignore support plugin (hsz.mobi)
 # Don't ignore settings.php files - sites/*/settings.php - except in
 # sites/default/; ignore local_settings.php files instead :)
-robots.txt
-
-*.mysql.gz
-*.mysql.gz.info
-
-# Ignore anything beyond the www symlink.
-www/*
 
 # Ignore anything in the /build directory, except the info file.
 build/*
 !build/this-directory-contains-external-components-of-this-build.txt
 
-drupal/cache/
-!drupal/cache/index.html
+www/cache/normal
+#!www/cache/index.html
+#!www/cache/.htaccess
 
-drupal/test.*
+www/test.*
 
 local_databases.php
 local_settings.php
-*.mysql.gz.aes
-*.mysql.gz.aes.info
 
 # Ignore PhpStorm config directories.
 .idea
@@ -30,7 +22,7 @@ local_settings.php
 *.scssc
 
 # Ignore the sites symlink in the drupal core directory.
-drupal/sites
+# www/sites
 
 # Ignore Mac files, especially "Icon\r" files which make the baby Jesus cry...
 # Ignore privatefiles.
@@ -46,5 +38,5 @@ Icon
 # Do not change anything above this line after "The following lines...".
 
 # Ignore the multisitemaker's configuration.php file and symlink.
-greyhead_multisitemaker
-drupal/multisitemaker
+# greyhead_multisitemaker
+www/multisitemaker
