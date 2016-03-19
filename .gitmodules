@@ -1,3 +1,6 @@
 [submodule "sites"]
 	path = www/sites
 	url = git@github.com:alexharries/drupal7_sites_common.git
+[submodule "multisite-template"]
+	path = deployment-scripts/multisite-template
+	url = git@github.com:alexharries/drupal7_multisite_template.git
