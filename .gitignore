@@ -29,9 +29,7 @@ local_settings.php
 # Ignore SCSS cache files.
 *.scssc
 
-# Don't ignore the .htaccess in the files directories - this allows us to put
-# the files/ directory into git.
-sites
+# Ignore the sites symlink in the drupal core directory.
 drupal/sites
 
 # Ignore Mac files, especially "Icon\r" files which make the baby Jesus cry...
