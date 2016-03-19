@@ -1,7 +1,3 @@
-# Created by .ignore support plugin (hsz.mobi)
-# Don't ignore settings.php files - sites/*/settings.php - except in
-# sites/default/; ignore local_settings.php files instead :)
-
 # Ignore anything in the /build directory, except the info file.
 build/*
 !build/this-directory-contains-external-components-of-this-build.txt
@@ -20,9 +16,6 @@ local_settings.php
 
 # Ignore SCSS cache files.
 *.scssc
-
-# Ignore the sites symlink in the drupal core directory.
-# www/sites
 
 # Ignore Mac files, especially "Icon\r" files which make the baby Jesus cry...
 # Ignore privatefiles.
