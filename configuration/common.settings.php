@@ -723,5 +723,16 @@ if (!defined('LOCAL_SETTINGS_INCLUDED') && file_exists('../local_settings.php') 
  * Example:
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
+ * ---
+ *
+ * Greyhead Drupal: we look in
+ * ../privatefiles/MULTISITE_IDENTIFIER/drupal-hash-salt.txt for a salt file.
  */
-$drupal_hash_salt = md5(CURRENT_ENVIRONMENT . ':' . MULTISITE_IDENTIFIER . ':' . 'KQYanuDKQYanuDGLpeIEJQpKQYanuDGLpeIEJQpg8yZCZeKQYanuDGLpeIEJQpg8yZCZeljUeS2XziKQYanuDGLpeIEJQpg8yZCZeljUeS2Xzisp09mzJZVB0');
+$drupal_hash_salt = MULTISITE_IDENTIFIER . ':' . getcwd();
+$drupal_hash_salt_file_name = '../privatefiles/' . MULTISITE_IDENTIFIER . '/drupal-hash-salt.txt',
+
+if (file_exists($drupal_hash_salt_file_name) && is_readable($drupal_hash_salt_file_name)) {
+  $drupal_hash_salt .= file_get_contents($drupal_hash_salt_file_name);
+}
+
+$drupal_hash_salt = md5($drupal_hash_salt);
