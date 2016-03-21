@@ -729,7 +729,7 @@ if (!defined('LOCAL_SETTINGS_INCLUDED') && file_exists('../local_settings.php') 
  * ../privatefiles/MULTISITE_IDENTIFIER/drupal-hash-salt.txt for a salt file.
  */
 $drupal_hash_salt = MULTISITE_IDENTIFIER . ':' . getcwd();
-$drupal_hash_salt_file_name = '../privatefiles/' . MULTISITE_IDENTIFIER . '/drupal-hash-salt.txt',
+$drupal_hash_salt_file_name = '../privatefiles/' . MULTISITE_IDENTIFIER . '/drupal-hash-salt.txt';
 
 if (file_exists($drupal_hash_salt_file_name) && is_readable($drupal_hash_salt_file_name)) {
   $drupal_hash_salt .= file_get_contents($drupal_hash_salt_file_name);
