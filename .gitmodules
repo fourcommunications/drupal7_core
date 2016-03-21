@@ -1,3 +1,0 @@
-[submodule "sites"]
-	path = www/sites
-	url = git@github.com:alexharries/drupal7_sites_common.git
