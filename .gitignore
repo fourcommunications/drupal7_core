@@ -33,3 +33,7 @@ Icon
 # Ignore the multisitemaker's configuration.php file and symlink.
 # greyhead_multisitemaker
 www/multisitemaker
+
+# Ignore www/sites
+www/sites
+
