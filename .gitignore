@@ -1,13 +1,4 @@
-# Ignore anything in the /build directory, except the info file.
-build/*
-!build/this-directory-contains-external-components-of-this-build.txt
-
-www/cache/normal
-#!www/cache/index.html
-#!www/cache/.htaccess
-
-www/test.*
-
+# Ignore local config files.
 local_databases.php
 local_settings.php
 
@@ -30,10 +21,5 @@ Icon
 
 # Do not change anything above this line after "The following lines...".
 
-# Ignore the multisitemaker's configuration.php file and symlink.
-# greyhead_multisitemaker
-www/multisitemaker
-
-# Ignore www/sites
-www/sites
-
+# Ignore the whole www directory.
+www
