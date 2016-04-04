@@ -2,7 +2,7 @@ name = Greyhead Drupal 7
 description = Set up a simple website with modular webpages, photo galleries, news and more.
 version = 7.x-1.0-20160216
 core = 7.x
-project = "greyhead"
+project = "greyheadprofile"
 
 dependencies[] = block
 dependencies[] = dblog

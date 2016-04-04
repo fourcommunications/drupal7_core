@@ -1,0 +1,17 @@
+name = Four Communications Drupal 7 install profile
+description = Set up a simple website with modular webpages, photo galleries, news and more.
+version = 7.x-1.0-20160404
+core = 7.x
+project = "fourprofile"
+
+dependencies[] = block
+dependencies[] = dblog
+dependencies[] = features
+dependencies[] = four_communications_base_modules
+dependencies[] = fourcomms_update_notifications
+dependencies[] = four_communications_user_roles
+dependencies[] = four_login_toboggan_settings
+dependencies[] = drupal_search
+dependencies[] = paragraph_page
+dependencies[] = development_settings
+dependencies[] = backup_migrate_daily

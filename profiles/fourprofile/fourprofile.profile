@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Enables modules and site configuration for a greyhead site installation.
+ * Enables modules and site configuration for a four site installation.
  */
 
 /**
@@ -11,8 +11,8 @@
  * @param $tasks
  * @param $install_state
  */
-function greyhead_install_tasks_alter(&$tasks, $install_state) {
-  $tasks['install_settings_form']['function'] = 'greyhead_install_settings_form';
+function fourprofile_install_tasks_alter(&$tasks, $install_state) {
+  $tasks['install_settings_form']['function'] = 'fourprofile_install_settings_form';
 }
 
 /**
@@ -20,7 +20,7 @@ function greyhead_install_tasks_alter(&$tasks, $install_state) {
  *
  * Allows the profile to alter the site configuration form.
  */
-function greyhead_form_install_configure_form_alter(&$form, $form_state) {
+function fourprofile_form_install_configure_form_alter(&$form, $form_state) {
   // Pre-populate the site name with the server name.
   $form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
 }
@@ -35,7 +35,7 @@ function greyhead_form_install_configure_form_alter(&$form, $form_state) {
  *
  * @return mixed
  */
-function greyhead_install_settings_form($form, &$form_state, &$install_state) {
+function fourprofile_install_settings_form($form, &$form_state, &$install_state) {
   // Check for $_GET variables to pre-set the database connection details; if
   // set, copy them into $_SESSION['multisitemaker'] and redirect to the page
   // without these sensitive details in the URL.
@@ -60,7 +60,7 @@ function greyhead_install_settings_form($form, &$form_state, &$install_state) {
 //    }
 //
 //    $redirect_options = array(
-//      'profile=greyhead',
+//      'profile=fourprofile',
 //      'locale=en',
 //    );
 //
